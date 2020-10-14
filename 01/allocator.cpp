@@ -2,7 +2,7 @@
 #include "allocator.hpp"
 
 
-void Allocator::makeAllocator(size_t maxSize){
+void Allocator::MakeAllocator(size_t maxSize){
     if(start_ == nullptr){
         maxSize_ = maxSize;
         start_ = new char[maxSize];
@@ -24,7 +24,7 @@ void Allocator::makeAllocator(size_t maxSize){
     }
 }
 
-char* Allocator::alloc(size_t size){
+char* Allocator::Alloc(size_t size){
     if(size == 0 || offset_ + size > maxSize_){
         return nullptr;
     }
@@ -33,7 +33,7 @@ char* Allocator::alloc(size_t size){
     return res; 
 }
 
-void Allocator::reset(){
+void Allocator::Reset(){
     offset_ = 0;
 }
 

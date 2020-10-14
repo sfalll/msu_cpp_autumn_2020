@@ -9,9 +9,9 @@ private:
     char* start_ = nullptr;
 public:
     ~Allocator();
-    void makeAllocator(size_t maxSize);
-    char* alloc(size_t size);
-    void reset();
+    void MakeAllocator(size_t maxSize);
+    char* Alloc(size_t size);
+    void Reset();
 };
 
 #endif
